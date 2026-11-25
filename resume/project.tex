@@ -1,24 +1,34 @@
-% \cvsection{Projects} %	SECTION TITLE
-% \begin{cventries} %	CONTENT
-%   \cvsimpleentry
-%     {\href{https://github.com/tuan-tt/calling_variant}{\textbf{Calling Variant}}} % Name
-%     {2018} % Date
-%     {
-%       \begin{cvitems} % Description
-%         \item {Developed a command-line tool for calling variant from DNA-sequencing data using \textbf{C}.}
-%         \item {Used \textbf{Burrow-Wheeler Aligner} for short-read alignment and \textbf{Bayesian model} for detecting mutations.}
-%         \item {This tool was \textbf{three times faster} than GATK (the state-of-the-art tool of this field at that time).}
-%       \end{cvitems}
-%     }
-%
-%   \cvsimpleentry
-%     {\href{https://github.com/kspham/mdup}{\textbf{Mdup}}} % Name
-%     {2018} % Date
-%     {
-%       \begin{cvitems} % Description
-%         \item {Developed a command-line tool for preprocessing linked-reads DNA-sequencing data.}
-%         \item {Used \textbf{hash algorithm, dynamic allocation memory}, and \textbf{multi-threading} to optimize storage and facilitate speed. This tool reduced the waiting time by \textbf{80\%} compared to other applications.}
-%       \end{cvitems}
-%     }
-%
-% \end{cventries}
+\cvsection{Projects} %	SECTION TITLE
+\begin{cventries} %	CONTENT
+  \cvsimpleentry
+    {\href{https://github.com/phuc16/cosplay-portfolio}{\textbf{cosplay-portfolio}} (production: \href{https://kamidayhehe.com}{kamidayhehe.com})} % Name
+    {Feb. 2026 - Present} % Date
+    {
+      \begin{cvitems} % Description
+        \item {Solo-built and run a production cosplay merch shop (MySQL, Redis, MinIO, Docker, Nginx).}
+        \item {Concurrency-safe checkout (row locking, idempotency keys): \textbf{20,000 attempts on 2,000 units, 0 oversell, 0 deadlocks}.}
+        \item {Redis lease (SET NX PX + Lua) so only one worker processes each order; 5,000 concurrent identical submits create 1 order.}
+        \item {1,265 backend and 839 frontend automated tests.}
+      \end{cvitems}
+    }
+
+  \cvsimpleentry
+    {\href{https://github.com/phuc16/discord-mcp}{\textbf{discord-mcp}} (TypeScript)} % Name
+    {Sep. 2026} % Date
+    {
+      \begin{cvitems} % Description
+        \item {MCP server exposing \textbf{102 Discord tools} to Claude and other MCP clients.}
+        \item {Fail-closed safety pipeline: permission tiers, rate limits, confirmation for dangerous actions, audit log.}
+      \end{cvitems}
+    }
+
+  \cvsimpleentry
+    {\href{https://github.com/phuc16/super-bot}{\textbf{super-bot}} (Go)} % Name
+    {Oct. 2025 - Sep. 2026} % Date
+    {
+      \begin{cvitems} % Description
+        \item {Werewolf game engine for Discord in Go, built around a \textbf{state machine} with sequence numbers to ignore stale timers.}
+        \item {OpenAI calls run behind a worker pool with a \textbf{circuit breaker}, retries with jitter and a daily budget cap.}
+      \end{cvitems}
+    }
+\end{cventries}

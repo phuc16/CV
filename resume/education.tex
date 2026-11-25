@@ -1,14 +1,24 @@
+% Same as \cventry but without the description row (no empty line after the entry)
+\newcommand*{\cventrynodesc}[4]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4}
+  \end{tabular*}\par\vspace{1.5mm}%
+}
+
 \cvsection{Education} %	SECTION TITLE
 \begin{cventries} %	CONTENT
-  \cventry
+  \cventrynodesc
+    {M.S. in Computer Science} % Degree
+    {Ho Chi Minh City University of Technology} % Institution
+    {Vietnam} % Location
+    {Sep. 2025 - Expected Apr. 2027} % Date
+  \cventrynodesc
     {B.S. in Computer Science} % Degree
-    {The University of XXX} % Institution
-    {Japan} % Location
-    {Sep. 2016 - Sep. 2018} % Date
-    {
-      \begin{cvitems} % Description
-        \item {Got a MEXT scholarship.}
-      \end{cvitems}
-    }
-
+    {Ho Chi Minh City University of Technology} % Institution
+    {Vietnam} % Location
+    {Aug. 2019 - Sep. 2023} % Date
 \end{cventries}

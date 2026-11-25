@@ -1,28 +1,40 @@
 \cvsection{Work Experience} % SECTION TITLE
 \begin{cventries} % CONTENT
   \cvsimpleentry
-    {\textbf{XXX, Senior Software Engineer - Backend}} % Job title
-    {Singapore, Nov. 2023 - Mar.2025} % Date
+    {\textbf{VinCSS Cybersecurity, Backend Developer}} % Job title
+    {Ho Chi Minh City, Oct. 2023 - Present} % Date
     {
       \begin{cvitems} % Description
-        \item {Work with \textbf{more than 200 millions of users}.}
-        \item {XXX.}
-        \item {XXX.}
-        \item {Tech Stacks: Go, Grpc, Kafka, Mysql, Redis, Kibana, Grafana.}
+        \item {Built Go services for a \textbf{FIDO2/IAM platform} of \textbf{9 microservices} and 3 web apps; top contributor of 2 services.}
+        \item {Replaced SSE with \textbf{Redis polling} for FCM push login: \textbf{2.5$\times$ less memory}, 20,000 waiting users/node (load test).}
+        \item {Added missing DB indexes: \textbf{12.7 s to 1.5 ms} at 10M users (8,500$\times$), 5 to 5,000 req/s (1,000$\times$), measured by benchmark.}
+        \item {Cached RBAC checks in Redis (6$\times$ faster); built a single-binary mode (4$\times$ less memory); cached the OAuth2 client registry (16$\times$ faster lookups).}
+        \item {Built device and ID-card enrollment flows (FIDO2 keys, national ID cards) and Redis sessions (Standalone, Sentinel, Cluster).}
+        \item {Built admin features (RBAC, backup/restore, search, license enforcement) and reworked the \textbf{RabbitMQ} notification flow.}
+        \item {Added \textbf{gRPC authentication} across all services and per-IP rate limits on push endpoints (30 requests/min).}
+        \item {Implemented \textbf{OpenTelemetry} tracing and correlation IDs across gRPC and HTTP calls.}
+        \item {Removed a shared submodule from 9 repositories; onboarded an intern and reviewed their pull requests.}
+        \item {Tech Stacks: Go, gRPC, Redis, RabbitMQ, MySQL/PostgreSQL, OpenTelemetry, Docker, GitLab CI.}
       \end{cvitems}
     }
+
   \cvsimpleentry
-    {\textbf{XXX, Senior Software Engineer - Backend}} % Job title
-    {Singapore, Sep. 2022 - Aug.2023} % Date
+    {\textbf{WEE Digital, Backend Developer}} % Job title
+    {Ho Chi Minh City, Mar. 2023 - Oct. 2023} % Date
     {
       \begin{cvitems} % Description
-        \item {XXX.}
-        \item {XXX.}
-        \item {XXX.}
-        \item {Tech Stacks: Go.}
+        \item {Built Go (Gin) and SQL backend for card-transaction and loan management, outsourced for a financial client (confidential).}
+        \item {Tech Stacks: Go, Gin, SQL.}
       \end{cvitems}
     }
 
-
+  \cvsimpleentry
+    {\textbf{Cohota, Full-stack Developer}} % Job title
+    {Ho Chi Minh City, Jun. 2022 - Feb. 2023} % Date
+    {
+      \begin{cvitems} % Description
+        \item {Built a cloud-hosted, H5P-based interactive content-management website.}
+        \item {Tech Stacks: Node.js, React.js, PostgreSQL.}
+      \end{cvitems}
+    }
 \end{cventries}
-%docker run -u $UID:$GID --rm -v $PWD:/work csmith/awesome-cv-builder
